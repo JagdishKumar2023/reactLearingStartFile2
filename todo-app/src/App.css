@@ -90,4 +90,6 @@
   border-radius: 15px;
   color: #282c34;
   background: rgb(254, 196, 210);
+  cursor: pointer;
+  font-size: bolder;
 }
