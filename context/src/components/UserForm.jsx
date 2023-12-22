@@ -39,7 +39,17 @@ export const UserForm = () => {
               onChange={handleChange}
             />
           </label>
-          <button>Submit</button>
+          <label htmlFor="gender">
+            gender:{" "}
+            <input
+              type="gender"
+              value={inputValues.gender}
+              name="gender"
+              id="gender"
+              onChange={handleChange}
+            />
+          </label>
+          <button id="BtnSub">Submit</button>
         </form>
       </div>
       <div className="userdata">

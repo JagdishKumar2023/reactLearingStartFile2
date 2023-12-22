@@ -1,8 +1,8 @@
-import { createContext, useState } from "react";
+import react, { createContext, useState } from "react";
 
 export const UserContext = createContext();
 
-export const UserProvider = ({ children }) => {
+export const Practice = ({ children }) => {
   const [inputValues, setInputValues] = useState({
     name: "",
     email: "",
@@ -14,6 +14,7 @@ export const UserProvider = ({ children }) => {
 
   const handleChange = (e) => {
     let { value, name } = e.target;
+
     setInputValues((prev) => ({ ...prev, [name]: value }));
   };
 

@@ -16,6 +16,8 @@ const UserData = () => {
                 <th>Name</th>
 
                 <th>Email</th>
+
+                <th>Gender</th>
               </tr>
             </thead>
             <tbody>
@@ -24,6 +26,7 @@ const UserData = () => {
                   <td>{idx + 1}</td>
                   <td>{ele.name}</td>
                   <td>{ele.email}</td>
+                  <td>{ele.gender}</td>
                 </tr>
               ))}
             </tbody>

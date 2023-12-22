@@ -39,6 +39,39 @@
 
 /* userData:- */
 
+#CounterAddMinus > h1 {
+  /* border: 2px solid red; */
+  color: #04aa6d;
+}
+
+input {
+  /* border: 2px solid red; */
+  padding: 10px;
+  background: rgb(100, 140, 100);
+  border-radius: 12px;
+  color: black;
+}
+
+#BtnSub {
+  border: 2px solid green;
+  padding: 20px;
+  border-radius: 15px;
+  margin-left: 10px;
+  width: 100px;
+  cursor: pointer;
+  background-color: #04aa6d;
+  font-size: 15px;
+  color: white;
+}
+
+label {
+  /* border: 2px solid gold; */
+  padding: 10px;
+  text-transform: capitalize;
+  font-size: 25px;
+  color: #04aa6d;
+}
+
 .table {
   margin-top: 50px;
 }

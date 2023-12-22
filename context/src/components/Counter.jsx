@@ -9,10 +9,10 @@ const Counter = () => {
   const { userData } = useContext(UserContext);
 
   return (
-    <div>
-      <h1>Counter: {userData.length}</h1>
-      <button onClick={handleIncreaseCount}>Increase</button>
-      <button onClick={handleDecreaseCount}>Decrease</button>
+    <div id="CounterAddMinus">
+      <h1> Counter: {userData.length}</h1>
+      {/* <button onClick={handleIncreaseCount}>Increase</button>
+      <button onClick={handleDecreaseCount}>Decrease</button> */}
     </div>
   );
 };
