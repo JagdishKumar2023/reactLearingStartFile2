@@ -22,4 +22,13 @@ function calculate(type) {
   }
 }
 
-console.log(calculate("divide"));
+// console.log(calculate("divide"));
+
+let obj = {
+  name: "jai",
+  address: {
+    city: "Indore",
+  },
+};
+
+console.log(obj.address.city);

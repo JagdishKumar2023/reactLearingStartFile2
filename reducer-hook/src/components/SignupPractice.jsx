@@ -1,7 +1,7 @@
 import React, { useReducer } from "react";
 
 const initialState = {
-  userValue: {
+  inputValue: {
     name: "",
     email: "",
   },
@@ -16,7 +16,7 @@ const reducer = (state, action) => {
     case "inputValues": {
       return {
         ...state,
-        userValue: { ...state.userValue, [payload.name]: payload.value },
+        inputValue: { ...state.inputValue, [payload.name]: payload.value },
       };
     }
 
@@ -26,23 +26,24 @@ const reducer = (state, action) => {
         userData: [...state.userData, payload],
       };
     }
+
+    default: {
+      return state;
+    }
   }
 };
 
-export const FormPractice = () => {
+export const SignupPractice = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const handleChange = (e) => {
-    const { value, name } = e.target;
-
-    dispatch({ type: "inputValues", payload: value, name });
+    const { name, value } = e.target;
+    dispatch({ type: "inputValues", payload: { name, value } });
   };
-
-  console.log(state);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch({ type: "submit", payload: state.userValue });
+    dispatch({ type: "submit", payload: state.inputValue });
   };
 
   return (
@@ -50,19 +51,19 @@ export const FormPractice = () => {
       <form onSubmit={handleSubmit}>
         <input
           type="text"
+          placeholder="enter name"
           name="name"
-          value={state.userValue.email}
-          placeholder="enter your name"
-          onChange={(e) => handleChange(e)}
+          value={state.inputValue.name}
+          onChange={handleChange}
         />
         <input
           type="email"
           name="email"
-          value={state.userValue.email}
-          placeholder="enter you email"
-          onChange={(e) => handleChange(e)}
+          value={state.inputValue.email}
+          placeholder="enter you  email"
+          onChange={handleChange}
         />
-        <button>Submit</button>
+        <button>submit</button>
       </form>
     </div>
   );
