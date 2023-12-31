@@ -3,7 +3,7 @@ import "./App.css";
 // import { SignupPage } from "./components/SignupPage";
 // import { SignupPractice } from "./components/SignupPractice";
 // import { FormPractice } from "./components/FormPractice";
-import { Practice2 } from "./components/Practice2";
+import { Pratice3 } from "./components/Pratice3";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       {/* <Todos /> */}
       {/* <Practice /> */}
       {/* <SignupPractice /> */}
-      <Practice2 />
+      <Pratice3 />
       {/* <FormPractice /> */}
     </div>
   );

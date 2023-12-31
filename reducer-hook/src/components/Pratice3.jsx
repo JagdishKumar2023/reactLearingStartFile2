@@ -4,8 +4,8 @@ const initialState = {
   inputValue: {
     name: "",
     email: "",
-    password: "",
     gender: "",
+    password: "",
   },
 
   userData: [],
@@ -35,7 +35,7 @@ const reducer = (state, action) => {
   }
 };
 
-export const Practice2 = () => {
+export const Pratice3 = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const handleChange = (e) => {
@@ -53,33 +53,33 @@ export const Practice2 = () => {
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="enter name"
           name="name"
           value={state.inputValue.name}
+          placeholder="enter your name"
           onChange={handleChange}
         />
         <input
           type="email"
-          placeholder="enter email"
           name="email"
           value={state.inputValue.email}
-          onChange={handleChange}
-        />
-        <input
-          type="password"
-          placeholder="enter password"
-          name="password"
-          value={state.inputValue.password}
+          placeholder="enter your email"
           onChange={handleChange}
         />
         <input
           type="gender"
-          placeholder="enter gender"
           name="gender"
           value={state.inputValue.gender}
+          placeholder="enter your gender"
           onChange={handleChange}
         />
-        <button>submit</button>
+        <input
+          type="password"
+          name="password"
+          value={state.inputValue.password}
+          placeholder="enter password"
+          onChange={handleChange}
+        />
+        <button>Submit</button>
       </form>
     </div>
   );
